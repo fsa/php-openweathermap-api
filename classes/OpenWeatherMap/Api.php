@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenWeatherMap;
+namespace FSA\OpenWeatherMap;
 
 class Api
 {

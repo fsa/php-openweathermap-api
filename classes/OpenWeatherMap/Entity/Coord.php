@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenWeatherMap\Entity;
+namespace FSA\OpenWeatherMap\Entity;
 
 class Coord extends AbstractEntity
 {

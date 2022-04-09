@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenWeatherMap\Entity;
+namespace FSA\OpenWeatherMap\Entity;
 
 class Forecast5 extends AbstractEntity
 {
