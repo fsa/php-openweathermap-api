@@ -59,7 +59,13 @@ class Api
         if ($weather === false) {
             return null;
         }
-        return new Entity\Current(json_decode($weather, true));
+        var_dump($weather);
+        return json_decode($weather);
+    }
+
+    public function fetchCurrentEntity()
+    {
+        return new Entity\Current($this->fetchCurrent());
     }
 
     public function fetchForecast()
@@ -77,7 +83,12 @@ class Api
         if ($weather === false) {
             return null;
         }
-        return new Entity\Forecast5(json_decode($weather, true));
+        return json_decode($weather);
+    }
+
+    public function fetchForecastEntity()
+    {
+        return new Entity\Forecast5($this->fetchForecast());
     }
 
     private function getRequestArray()
@@ -98,7 +109,7 @@ class Api
         }
         $result['APPID'] = $this->api_key;
         $result['units'] = 'metric';
-        $result['lang'] = 'ru';
+        $result['lang'] = $this->lang;
         return $result;
     }
 }
