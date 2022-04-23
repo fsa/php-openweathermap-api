@@ -59,7 +59,6 @@ class Api
         if ($weather === false) {
             return null;
         }
-        var_dump($weather);
         return json_decode($weather);
     }
 
